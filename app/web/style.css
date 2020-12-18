@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#menubar {
+  margin: 0;
+  padding: 0;
+  height: 1.5em;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+  -webkit-app-region: drag;
+}
+
+#menubar>.left {
+  height: 100%;
+  flex-shrink: 1;
+  display: flex;
+  margin: 0 0.5em;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+#menubar>.filler {
+  flex-grow: 1;
+  height: 100%;
+  -webkit-app-region: drag;
+}
+
+#menubar>.right {
+  height: 100%;
+  flex-shrink: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row-reverse;
+  color: #b9bbbe;
+}
+
+#title {
+  font-family: Consolas, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-app-region: drag;
+}
+
+#close-btn {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  -webkit-app-region: no-drag;
+}
+
+#close-btn:hover {
+  background-color: #f04747;
+  color: #dcddde;
+}
+
+#maximize-btn {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  -webkit-app-region: no-drag;
+}
+
+#maximize-btn:hover {
+  background-color: rgba(79, 84, 92, 0.16);
+  color: #dcddde;
+}
+
+#minimize-btn {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  -webkit-app-region: no-drag;
+}
+
+#minimize-btn:hover {
+  background-color: rgba(79, 84, 92, 0.16);
+  color: #dcddde;
+}
+
+canvas {
+  margin-top: 1.5em;
+  pointer-events: none;
+  border-radius: 0 0 1em 1em;
+}
